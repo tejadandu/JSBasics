@@ -1,0 +1,62 @@
+function upper(n){
+    for(let row = 1; row <= (n -1)/2; row += 1){
+        let str = "";
+        let letfstars = row;
+        for(let j=1; j <= letfstars; j +=1){
+            str += "*";
+        }
+        let spaces = n - 2* row;
+        for(let i = 1; i <= spaces; i+=1){
+            str += " ";
+        }
+        let rightstars = row;
+        for(let j = 1; j <= rightstars; j += 1){
+            str += "*"
+        }
+        console.log(str);
+    }
+}
+
+function  lower(n) {
+    for(let row = 1; row <= (n-1)/2; row += 1){
+        let str = "";
+        let leftstars = (n-1)/2 -row+1 ;
+        for(let i = 1; i <= leftstars; i += 1){
+            str += "*";
+        }
+        let spaces = 2*row -1;
+        for(let k=1; k <= spaces; k += 1){
+            str += " ";
+        }
+        let rightstars = (n-1)/2 - row+1;
+        for(let j = 1; j <= rightstars; j +=1){
+            str += "*"
+        }
+        console.log(str);
+    }
+}
+
+function middle(n){
+    let str = "";
+    for(let j = 1; j <= n; j+=1){
+        str += "*";
+    }
+    console.log(str);
+}
+function pattern(n) {
+    upper(n);
+    middle(n);
+    lower(n);
+
+}
+
+// console.log(pattern(7));
+/*
+*     *
+**   **
+*** ***
+*******
+*** ***
+**   **
+*     *
+*/
